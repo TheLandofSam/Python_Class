@@ -1,0 +1,37 @@
+BOOKS = [
+    {'title': '1984', 'genre': 'Dystopian', 'rating': 10.00},
+    {'title': 'Brave New World', 'genre': 'Dystopian', 'rating': 8.4},
+    {'title': 'SnowCrash', 'genre': 'Science Fiction', 'rating': 10.00},
+    {'title': 'The Ink Black Heart', 'genre': 'Mystery', 'rating': 9.00}
+
+]
+
+def print_books(books_list):
+    print('\n This is your books recommendations:')
+    for book in books_list: 
+        print(f'{book['title']} | {book['genre']} | {book['rating']}')
+
+print_books(BOOKS) #the book_lidt being sent in is BOOKS
+
+def book_recommendation_system():
+    genre = input('Enter preferred genre (Science Fiction, Mystery, Dystopian): ')
+
+    min_rating = input('Enter min rating( e.g. 8.0)')
+    #book_list = []    ---> line 20-24 is same as line $
+    for book in BOOKS: # this way is ok, prints line by line
+        if book in BOOKS:
+            if book['genre'] == genre:
+                print(f'This is your book {book}')
+
+book_recommendation_system()
+
+# List comprehension
+#new_list = [expression for tiem in collection if condition]
+books_list = [book for book in BOOKS if book['genre'] == genre] # $ prints as one big long string
+
+print(books_list) # this way is not requ
+
+print_books(books_list)
+
+book_recommendation_system()
+
