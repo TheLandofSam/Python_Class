@@ -1,0 +1,102 @@
+#note: input always returns a string
+
+from abc import ABC, abstractmethod
+
+#Abstract Vehicle Class
+class Vehicle(ABC):
+    def __init__(self, make, price_per_day):
+        self.__make = make
+        self.__price_per_day = price_per_day
+
+    def rent(self, days):
+        if days > 0:
+            rental_cost = days * self.__price_per_day
+            return rental_cost
+        else:
+            print('Rental days must be greater than 0.')
+
+    @property
+    def make(self): # getter
+        return self.__make
+
+    @make.setter
+    def make(self, value):
+        if value is str:
+            self.__make = value
+        else:
+            print('Make must be a string.')
+    @property
+    def price_per_day(self): # getter
+        return self.__price_per_day
+
+    @price_per_day.setter
+    def price_per_day(self, value):
+        if isinstance(value, float):
+            self.__price_per_day = value
+        else:
+            print('Make must be a float.')
+
+    @abstractmethod
+    def show_details(self):
+        pass
+
+#Car subclass
+class Car(Vehicle):
+    def __init__(self, make, price_per_day, doors):
+        super().__init__(make, price_per_day)
+        self.__doors = doors
+
+    @property
+    def doors(self): # getter
+        return self.__doors
+
+    @get_doors.setter
+    def doors(self, value):
+        if isinstance(value, int): 
+            self.__doors = value
+        else:
+            print('Make must be an int.')
+
+    def show_details(self):
+        print('\n*** *** Car *** ***')
+        print(f' 🚗 {self.make}, 💲 {self.price_per_day} per day, ⭐ {self.__doors} door vehicle')
+
+mazda = Car('Mazda', 30.00, 3)    
+subaru = Car('Subaru', 45.00, 5)
+
+def main():
+
+    while True:
+        print('Welcome to Speedy Motors!')
+        choice = input('Please make a choice: 1 - Rent a car, 2 - Exit ')
+        if choice == 2:
+            break
+        if choice == 1:
+            continue
+
+        print('\nToday we have two car types available for rental:')
+        mazda.show_details()
+        subaru.show_details()
+
+        vehicle_type = input('\nWhich type of car would you like to rent? ')
+        days = int(input('For how many days would you like to rent the vehicle? ')) # chg to int b/c returns str
+
+        if vehicle_type.capitalize() == 'Mazda':
+           Estimated_Total = mazda.rent(days)
+
+        elif vehicle_type.capitalize() == 'Subaru':     
+            Estimated_Total = subaru.rent(days)  
+
+        else:
+            print('Please select from the vehicles we have available.')
+
+        print(f'Your total estimated cost is 💲{Estimated_Total}.')
+
+
+# subaru.show_details()
+# mazda.show_details()
+# mazda.set_make(self, 'Mazda') --> ASK PAULA about getters and setters!
+# make.setter(Vehicle, "Mazda")
+# mazda.show_details()
+
+main()

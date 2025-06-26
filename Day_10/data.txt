@@ -1,0 +1,49 @@
+# data.txt
+
+Ms. Jennifer Martin-White
+714-555-7405
+jenniferwhite@bogusemail.edu
+
+Mr. Erick
+800-555-6771
+tomdavis@bogusemail.com
+
+Mrs Neil P
+783-555-4799
+neilpatterson@bogusemail.com
+
+Ms Laura Jefferson
+516-555-4615
+laurajefferson@bogusemail.net
+
+1234 Unicorn Blvd, Rainbow City, Fantasyland 98765
+
+4567 Dragon's Lair Ave, Firebreath Town, Mythical Kingdom 54321
+
+7890 Pizza Slice St., Pepperoni Park, Cheesy Town 76543
+
+One Silly Street, Laughville Giggleland 10101
+
+1234 Sharkfin Crescent, Oceanview, Fishy City
+
+9021 Space Cowboy Rd.., Galaxy 17, Starbase 7 00001
+
+789 Techno Blvd, RoboCity, Futureland 67890
+
+6789 Marshmallow Dr., Sweetville., Sugarland
+
+https://www.unicornland.fun
+
+http.//www.pizzaslice-paradise.com/cheesey
+
+https://www.dragonlair.live/roar.search?cat
+
+www.sillystreet.adventures/laugh
+
+https://www.sharkfinworld.net/oceanexplorers
+
+https://www.spacecowboy.space/launchpad
+
+http://www.sweettoothcity.com/marshmallow-magic
+
+www.robotic-future.org/techno-party
