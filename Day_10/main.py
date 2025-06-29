@@ -3,7 +3,7 @@ from contextlib import ContextDecorator
 import re
 
 #read doc
-'''
+
 with open('data.txt', 'r') as file:
     try:
         content = file.read()
@@ -35,20 +35,13 @@ with open('data.txt', 'r') as file:
     for name in names:
         print(f'🧑{name}')
 
-#test recall of newly added data
-#with open('data.txt', 'r') as file:
-#    content = file.read()
-#    print(content)
+#pattern = r'?\d{3,4}\w{4,7}?\d{5}' broken
+# (?:Ave|St|Street|Crescent|Rd|Blvd|Dr)?\d{0,5}?
 
-#pattern = r'?\d{3,4}\w{4,7}?\d{5}'
-'''
-with open('data.txt', 'r') as file:
-    try:
-        content = file.read()
-    except:
-        print('File not found')
-    
-    pattern = r'^\d{3,4}.+$\d{5}'
+    pattern = r'\d{3,4}.+\d{5}'
+  
     addresses = re.findall(pattern, content)
     for address in addresses:
         print(f'🏠 {address}')
+
+    print(f'🏠 {addresses}')
