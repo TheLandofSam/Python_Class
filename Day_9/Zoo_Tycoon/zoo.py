@@ -8,7 +8,7 @@ class Zoo:
 
     def release_animal(self, animal_name: str):
         for animal in self.zoo:
-            if animal_name.lower() == animal.name.lower()
+            if animal_name.lower() == animal.name.lower():
                 print(f'{animal_name} has been released. Good luck {animal_name}!')
                 self.zoo.remove(pet)
                 return pet

@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 import datetime
-##from playsound import playsound
 
 #base class
 class Animal(ABC):
@@ -24,7 +23,7 @@ class Animal(ABC):
 
 class Lion(Animal):
     def __init__(self, name, species, dob, sound, characteristic):
-        super().__init__(name, speecies, dob)
+        super().__init__(name, species, dob)
         self.sound = sound
         self.characteristic = characteristic
 
@@ -39,14 +38,14 @@ class Lion(Animal):
 
 class Monkey(Animal):
     def __init__(self, name, species, dob, sound, characteristic):
-        super().__init__(name, speecies, dob)
+        super().__init__(name, species, dob)
         self.sound = sound
         self.characteristic = characteristic
 
     def sound(self):
         print(f'{self.sound}')
 
-    def behavior(self):
+    def characteristic(self):
         if self.characteristic == 'playful':
             return 'playful'
         else:
@@ -54,9 +53,9 @@ class Monkey(Animal):
 
 class Owl(Animal):
     def __init__(self, name, species, dob, sound, characteristic):
-        super().__init__(name, speecies, dob)
+        super().__init__(name, species, dob)
         self.sound = sound
-        self.behavior = behavior
+        self.characteristic = characteristic
 
     def sound(self):
         print(f'{self.sound}')
@@ -67,14 +66,8 @@ class Owl(Animal):
         else:
             return 'Not a real owl.'
 
-leo = Lion('Leo', 'Lion', 08162020, 'Rarrrr', 'yes')
-print(leo)
-print(leo.sound())
+leo = Lion('Leo', 'Lion', 16082020, 'Rarrrr', 'yes')
 
-curious = Monkey('Curious George', 'Monkey', 04202021, 'Eee...eee...eee', 'playful')
-print(curious)
-print(curious.sound())
+curious = Monkey('Curious George', 'Monkey', 20042021, 'Eee...eee...eee', 'playful')
 
 hedwig = Owl('Hedwig', 'Owl', 10102010, 'hooo hooo hooo', 'watchful')
-print(hedwig)
-print(hedwig.sound())

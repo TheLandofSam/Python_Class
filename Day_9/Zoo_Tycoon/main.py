@@ -1,13 +1,13 @@
-from animal import ^
-from adoption import Zoo
+from animals import *
+from zoo import *
 from datetime import datetime
 
 def main():
 
     zoo = Zoo()
 
-    leo = Lion('Leo', 'Lion', 08162020, 'Rarrrr', 'yes')
-    curious = Monkey('Curious George', 'Monkey', 04202021, 'Eee...eee...eee', 'playful')
+    leo = Lion('Leo', 'Lion', 16082020, 'Rarrrr', 'yes')
+    curious = Monkey('Curious George', 'Monkey', 20042021, 'Eee...eee...eee', 'playful')
     hedwig = Owl('Hedwig', 'Owl', 10102010, 'hooo hooo hooo', 'watchful')
 
     zoo.add_animal(leo)
